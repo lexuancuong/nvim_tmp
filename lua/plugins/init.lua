@@ -118,6 +118,8 @@ return packer.startup(function()
       end,
    }
 
+   use {'kdheepak/lazygit.nvim'}
+
    -- lsp stuff
    use {'williamboman/nvim-lsp-installer'}
    use {
