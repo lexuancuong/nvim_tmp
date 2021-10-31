@@ -101,11 +101,11 @@ return packer.startup(function()
    }
 
    -- Linting
-   -- use {
-   --   'dense-analysis/ale',
-   --    config = override_req("ale", "plugins.configs.ale"),
-   -- }
-   -- use {'nathunsmitty/nvim-ale-diagnostic'}
+   use {
+     'dense-analysis/ale',
+      config = override_req("ale", "plugins.configs.ale"),
+   }
+   use {'nathunsmitty/nvim-ale-diagnostic'}
 
    -- git stuff
    use {
