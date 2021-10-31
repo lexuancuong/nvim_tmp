@@ -70,7 +70,7 @@ return packer.startup(function()
    }
 
    use {
-      "akinsho/bufferline.nvim",
+      "akinsho/bufferline.nvim", -- buffer manager
       disable = not status.bufferline,
       after = "nvim-web-devicons",
       config = override_req("bufferline", "plugins.configs.bufferline"),
@@ -101,11 +101,11 @@ return packer.startup(function()
    }
 
    -- Linting
-   use {
-     'dense-analysis/ale',
-      config = override_req("ale", "plugins.configs.ale"),
-   }
-   use {'nathunsmitty/nvim-ale-diagnostic'}
+   -- use {
+   --   'dense-analysis/ale',
+   --    config = override_req("ale", "plugins.configs.ale"),
+   -- }
+   -- use {'nathunsmitty/nvim-ale-diagnostic'}
 
    -- git stuff
    use {

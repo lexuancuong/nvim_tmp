@@ -112,7 +112,7 @@ M.mappings = {
    -- close current focused buffer
    close_buffer = "<leader>x",
    copy_whole_file = "<C-a>", -- copy all contents of the current buffer
-   line_number_toggle = "<leader>n", -- show or hide line number
+   line_number_toggle = "<leader>l", -- show or hide line number
    new_buffer = "<S-t>", -- open a new buffer
    new_tab = "<C-t>b", -- open a new vim tab
    save_file = "<C-s>", -- save file using :w
@@ -155,10 +155,8 @@ M.mappings = {
 M.mappings.plugins = {
    -- list open buffers up the top, easy switching too
    bufferline = {
-      next_buffer = "<TAB>", -- next buffer
-      prev_buffer = "<S-Tab>", -- previous buffer
-      pick_buffer = "<leader>p", -- pick buffer
-      pick_close_buffer = "<leader>pc", -- pick then close buffer
+      next_buffer = "<leader>n", -- next buffer
+      prev_buffer = "<leader>p", -- previous buffer
    },
    -- easily (un)comment code, language aware
    comment = {
@@ -183,14 +181,15 @@ M.mappings.plugins = {
    },
    -- multitool for finding & picking things
    telescope = {
-      buffers = "<leader>fb",
-      find_files = "<leader>ff",
-      find_hiddenfiles = "<leader>fa",
-      git_commits = "<leader>cm",
-      git_status = "<leader>gt",
+      buffers = "<leader>fb", -- view all of current buffers
+      find_files = "<leader>ff", -- find files by name with fzf
+      find_hiddenfiles = "<leader>fa", -- find hidden files
+      git_commits = "<leader>cm", -- view all commits of current branch
+      git_status = "<leader>gt", -- view all files changes
       help_tags = "<leader>fh",
-      live_grep = "<leader>fw",
+      live_grep = "<leader>fw", -- find a word by using rip grep
       oldfiles = "<leader>fo",
+      resume = "<leader>r",
       themes = "<leader>th", -- NvChad theme picker
       -- media previews within telescope finders
       telescope_media = {

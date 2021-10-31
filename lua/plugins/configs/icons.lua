@@ -84,7 +84,7 @@ icons.setup {
       },
       py = {
          icon = "",
-         color = colors.yellow,
+         color = colors.cyan,
          name = "py",
       },
       ["robots.txt"] = {

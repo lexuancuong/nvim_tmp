@@ -21,6 +21,7 @@ local white = colors.white
 local yellow = colors.yellow
 local yellow_light = "#fff"
 local red_light = "#802000"
+local white_light = "#bfbfbf"
 
 local ui = require("core.utils").load_config().ui
 
@@ -53,10 +54,10 @@ else
    fg("Comment", grey_fg)
 end
 
--- Disable cusror line
-cmd "hi clear CursorLine"
+fg("MsgArea", "#ff9966")  -- for Command line text in vim
+-- Disable cusror line in insert mode
 -- Line number
-fg("cursorlinenr", white)
+fg("cursorlinenr", yellow)
 
 -- same it bg, so it doesn't appear
 fg("EndOfBuffer", black)
@@ -78,7 +79,7 @@ fg("CmpItemMenu", white)
 -- misc
 
 -- inactive statuslines as thin lines
-fg("StatusLineNC", one_bg2 .. " gui=underline")
+fg("StatusLineNC", one_bg2 .. " gui=bold")
 
 fg("LineNr", grey)
 fg("NvimInternalError", red)
@@ -139,7 +140,7 @@ fg("NvimTreeIndentMarker", one_bg2)
 bg("NvimTreeNormal", darker_black)
 bg("NvimTreeNormalNC", darker_black)
 fg("NvimTreeOpenedFolderName", blue)
-fg("NvimTreeRootFolder", red .. " gui=underline") -- enable underline for root folder in nvim tree
+fg("NvimTreeRootFolder", red .. " gui=bold") -- enable underline for root folder in nvim tree
 fg_bg("NvimTreeStatuslineNc", darker_black, darker_black)
 fg("NvimTreeVertSplit", darker_black)
 bg("NvimTreeVertSplit", darker_black)

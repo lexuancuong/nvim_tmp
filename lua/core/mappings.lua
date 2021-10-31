@@ -126,8 +126,6 @@ M.bufferline = function()
 
    map("n", m.next_buffer, ":BufferLineCycleNext <CR>")
    map("n", m.prev_buffer, ":BufferLineCyclePrev <CR>")
-   map("n", m.pick_buffer, ":BufferLinePick <CR>")
-   map("n", m.pick_close_buffer, ":BufferLinePickClose <CR>")
 end
 
 M.comment = function()
@@ -163,6 +161,7 @@ M.telescope = function()
    map("n", m.live_grep, ":Telescope live_grep <CR>")
    map("n", m.oldfiles, ":Telescope oldfiles <CR>")
    map("n", m.themes, ":Telescope themes <CR>")
+   map("n", m.resume, ":Telescope resume <CR>")
    map("n", "<leader>ft", "<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand('<cword>')})<cr>", {})
 end
 
